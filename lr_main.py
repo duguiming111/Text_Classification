@@ -43,7 +43,7 @@ def cut_words(data,stopwords,test_size = 0.2):
     return sklearn.model_selection.train_test_split(text_list, y, test_size=test_size, random_state=1028)
 
 
-def calculate_tfidf(X_train,X_test):
+def calculate_tfidf(X_train, X_test):
     """
     计算文本的tf-idf
     :param X_train: 训练集
@@ -54,7 +54,7 @@ def calculate_tfidf(X_train,X_test):
     vectorizer.fit_transform(X_train)
     X_train_tfidf = vectorizer.transform(X_train)
     X_test_tfidf = vectorizer.transform(X_test)
-    return X_train_tfidf,X_test_tfidf,vectorizer
+    return X_train_tfidf, X_test_tfidf, vectorizer
 
 
 def evaluate(model, X, y):
