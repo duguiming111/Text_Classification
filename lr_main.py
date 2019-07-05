@@ -1,8 +1,7 @@
-"""
-基于逻辑回归的垃圾短信识别
-"""
+# Author:duguiming
+# Description:基于逻辑回归的垃圾短信识别
+# Date:2019-07-05
 import jieba
-from sklearn import metrics
 import sklearn
 from sklearn.linear_model import LogisticRegression
 from sklearn.feature_extraction.text import TfidfVectorizer
@@ -14,12 +13,12 @@ def read_data(data_path):
     :param data_path: 数据存放路径
     :return: 读取到的数据
     """
-    f = open(data_path, 'r', encoding='utf-8')
-    data = f.readlines()
+    with open(data_path, 'r', encoding='utf-8') as f:
+        data = f.readlines()
     return data
 
 
-def cut_words(data,stopwords,test_size = 0.2):
+def cut_words(data,stopwords, test_size=0.2):
     """
     分词、去停用词并将数据集分成训练集和测试集
     :param data: 文本数据
@@ -34,7 +33,7 @@ def cut_words(data,stopwords,test_size = 0.2):
     text_list = list()
     for line in data:
         label, text = line.split('\t', 1)
-        cut_text =[word for word in jieba.cut(text) if word not in stop_words]
+        cut_text = [word for word in jieba.cut(text) if word not in stop_words]
         if cut_text == '':
             continue
         else:
@@ -90,11 +89,11 @@ if __name__ == "__main__":
     # step5 模型评估
     accuracy, auc = evaluate(lr, X_train_tfidf, y_train)
     print("训练集正确率：%.4f%%\n" % (accuracy * 100))
-    print("训练集AUC值：%.6f\n" % (auc))
+    print("训练集AUC值：%.6f\n" % auc)
 
     accuracy, auc = evaluate(lr, X_test_tfidf, y_test)
     print("测试集正确率：%.4f%%\n" % (accuracy * 100))
-    print("测试AUC值：%.6f\n" % (auc))
+    print("测试AUC值：%.6f\n" % auc)
 
 
 
