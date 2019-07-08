@@ -11,9 +11,9 @@ nb_main.py<br />
 ### 3、基于支持向量机的文本分类算法
 svm_main.py <br />
 ## DL 基于深度学习的文本分类
-### 1、基于CNNh和RNN的文本分类算法
+### 1、基于CNN和RNN的文本分类算法
 TF_CNN_RNN目录
-#### (1)目录结构
+#### （1）目录结构
 &nbsp;&nbsp;&nbsp;&nbsp;config--配置文件<br />
 &nbsp;&nbsp;&nbsp;&nbsp;data--数据存放路径<br />
 &nbsp;&nbsp;&nbsp;&nbsp;data_helper--数据处理<br />
@@ -38,7 +38,7 @@ TF_CNN_RNN目录
 </ul>
 需要的同学可以去gaussic的github上自行下载。
 
-#### (3)运行
+#### （3）运行
 <ul>
     <li>step1:在utils下，python3 word2vec.py</li>
     <li>step2:训练CNN，python3 train_cnn.py</li>
@@ -47,7 +47,7 @@ TF_CNN_RNN目录
     <li>step5:启动服务，python3 server.py</li>
 </ul>
 
-#### (4)参考
+#### （4）参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
 [2] https://github.com/cjymz886/text-cnn
 
