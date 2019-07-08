@@ -1,7 +1,6 @@
-"""
-@atthor:duguiming
-@desceiption:配置文件
-"""
+# Author:duguiming
+# Desceiption:配置文件
+# Date:2019-07-08
 import os
 base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
@@ -25,6 +24,7 @@ class PathConfig(object):
     # 模型存放地址
     cnn_best_model_dir = os.path.join(base_dir, 'result/best_model/textcnn')
     rnn_best_model_dir = os.path.join(base_dir, 'result/best_model/textrnn')
+
 
 class CNNConfig(object):
     """CNN配置文件"""

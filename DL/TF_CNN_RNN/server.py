@@ -1,7 +1,6 @@
-"""
-@author:duguiming
-@description:对外提供接口服务
-"""
+# Author:duguiming
+# Description:对外提供接口服务
+# Date:2019-07-08
 import json
 from predict import CNNModel
 from flask import Flask, request, jsonify

@@ -1,7 +1,6 @@
-"""
-@author:duguiming
-@description:训练CNN模型
-"""
+# Author:duguiming
+# Description:训练CNN模型
+# Date:2019-07-08
 import time
 import os
 import tensorflow as tf

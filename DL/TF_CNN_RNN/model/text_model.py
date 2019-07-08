@@ -1,7 +1,6 @@
-"""
-@author:duguiming
-@description:定义文本模型的结构
-"""
+# Author:duguiming
+# Description:定义文本模型的结构
+# Date:2019-07-08
 import tensorflow as tf
 
 

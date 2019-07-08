@@ -1,7 +1,6 @@
-"""
-@dauthor:duguiming
-@description:用训练好的模型进行预测
-"""
+# Author:duguiming
+# Description:用训练好的模型进行预测
+# Date:2019-07-08
 import heapq
 import tensorflow as tf
 

@@ -1,7 +1,6 @@
-"""
-@author:duguiming
-@description:数据处理
-"""
+# Author:duguiming
+# Description:数据处理
+# Date:2019-07-08
 import jieba
 import numpy as np
 import tensorflow.contrib.keras as kr

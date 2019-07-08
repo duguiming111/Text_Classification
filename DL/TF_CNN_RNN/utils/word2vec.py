@@ -1,7 +1,6 @@
-"""
-@author:duguiming
-@description:训练词向量
-"""
+# Author:duguiming
+# Description:训练词向量
+# Date:2019-07-08
 import logging
 import time
 import jieba
