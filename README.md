@@ -50,4 +50,5 @@ TF_CNN_RNN目录
 #### （4）参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
 [2] https://github.com/cjymz886/text-cnn
+### 2、基于FastText文本分类算法
 
