@@ -10,7 +10,7 @@ from gensim.models import word2vec
 
 sys.path.append('..')
 
-from config.config import PathConfig
+from models.base_config import BaseConfig
 
 
 class ReadData(object):
@@ -42,6 +42,6 @@ def train_word2vec(filenames):
 
 
 if __name__ == "__main__":
-    config = PathConfig()
+    config = BaseConfig()
     filenames = [config.train_dir, config.test_dir, config.val_dir]
     train_word2vec(filenames)
