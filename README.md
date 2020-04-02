@@ -50,7 +50,49 @@ svm_main.py <br />
 </ol>
 xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextRNN_Att和Transformer
 
-### 4、 结果
+### 4、 效果
+<table border="1">
+    <tr>
+        <td>模型</td>
+        <td>准确率</td>
+        <td>备注</td>
+    </tr>
+    <tr>
+        <td>TextCNN</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TextRNN</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TextRCNN</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>TextRNN_Att</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>DPCNN</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>HAN</td>
+        <td></td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Transformer</td>
+        <td></td>
+        <td></td>
+    </tr>
+</table>
 
 ### 5、参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
