@@ -23,7 +23,7 @@ svm_main.py <br />
 </ul>
 
 ### 2、数据
-使用THUCNews的一个子集进行训练与测试，由<a herf="https://github.com/gaussic/text-classification-cnn-rnn">gaussic</a>提供。<br />
+使用THUCNews的一个子集进行训练与测试，由<a href="https://github.com/gaussic/text-classification-cnn-rnn">gaussic</a>提供。<br />
 类别如下：
 ```
 体育, 财经, 房产, 家居, 教育, 科技, 时尚, 时政, 游戏, 娱乐
