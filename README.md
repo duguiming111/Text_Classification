@@ -51,7 +51,7 @@ svm_main.py <br />
 xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextRNN_Att和Transformer
 
 ### 4、 效果
-<table border="1">
+<table>
     <tr>
         <td>模型</td>
         <td>准确率</td>
@@ -59,8 +59,8 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
     <tr>
         <td>TextCNN</td>
-        <td></td>
-        <td></td>
+        <td>0.931</td>
+        <td>step为2200时候，提前终止了</td>
     </tr>
     <tr>
         <td>TextRNN</td>
