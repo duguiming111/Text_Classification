@@ -70,16 +70,19 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
 <table>
     <tr>
         <td>模型</td>
-        <td>验证集准确率</td>
+        <td>val准确率</td>
+        <td>test准确率</td>
         <td>备注</td>
     </tr>
     <tr>
         <td>TextCNN</td>
         <td>0.931</td>
+        <td>0.945</td>
         <td>step为2200时候，提前终止了</td>
     </tr>
     <tr>
         <td>TextRNN</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
@@ -87,9 +90,11 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
         <td>TextRCNN</td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>TextRNN_Att</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
@@ -97,14 +102,17 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
         <td>DPCNN</td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>HAN</td>
         <td></td>
         <td></td>
+        <td></td>
     </tr>
     <tr>
         <td>Transformer</td>
+        <td></td>
         <td></td>
         <td></td>
     </tr>
