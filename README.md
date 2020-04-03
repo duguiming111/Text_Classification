@@ -83,7 +83,7 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     <tr>
         <td>TextRNN</td>
         <td>0.946</td>
-        <td>96.98</td>
+        <td>0.97</td>
         <td>训练的速度相对TextCNN较慢</td>
     </tr>
     <tr>
