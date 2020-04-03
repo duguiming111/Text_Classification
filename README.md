@@ -82,15 +82,15 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
     <tr>
         <td>TextRNN</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.946</td>
+        <td>96.98</td>
+        <td>训练的速度相对TextCNN较慢</td>
     </tr>
     <tr>
         <td>TextRCNN</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.922</td>
+        <td>0.964</td>
+        <td>GRU+pooling</td>
     </tr>
     <tr>
         <td>TextRNN_Att</td>
