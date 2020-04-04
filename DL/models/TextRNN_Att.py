@@ -110,5 +110,5 @@ class TextRNNAtt(object):
             # global_step 自动+1
 
         with tf.name_scope('accuracy'):
-            correct_pred = tf.equal(self.predict, tf.argmax(self.input_y, 1))
+            correct_pred = tf.equal(self.y_pred_cls, tf.argmax(self.input_y, 1))
             self.acc = tf.reduce_mean(tf.cast(correct_pred, tf.float32), name='accuracy')
