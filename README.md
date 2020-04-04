@@ -94,9 +94,9 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
     <tr>
         <td>TextRNN_Att</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.935</td>
+        <td>0.962</td>
+        <td>内存不够可以调小batch_size</td>
     </tr>
     <tr>
         <td>DPCNN</td>
