@@ -89,7 +89,7 @@ class TextRNNAtt(object):
             b = tf.Variable(tf.zeros([self.config.num_classes]), name='b')
             self.logits = tf.matmul(self.out_drop, w) + b
             self.prob = tf.nn.softmax(self.logits)
-            self.predict = tf.argmax(tf.nn.softmax(self.logits), 1, name='predict')
+            self.y_pred_cls = tf.argmax(tf.nn.softmax(self.logits), 1, name='predict')
 
         with tf.name_scope('loss'):
             cross_entropy = tf.nn.softmax_cross_entropy_with_logits(logits=self.logits, labels=self.input_y)
