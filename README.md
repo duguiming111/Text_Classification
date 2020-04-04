@@ -100,15 +100,15 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
     <tr>
         <td>DPCNN</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.934</td>
+        <td>0.955</td>
+        <td>训练的速度较快</td>
     </tr>
     <tr>
         <td>HAN</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.913</td>
+        <td>0.95</td>
+        <td>采用GRU</td>
     </tr>
     <tr>
         <td>Transformer</td>
