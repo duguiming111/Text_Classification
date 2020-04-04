@@ -112,9 +112,9 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
     <tr>
         <td>Transformer</td>
-        <td></td>
-        <td></td>
-        <td></td>
+        <td>0.909</td>
+        <td>0.92</td>
+        <td>效果最差...</td>
     </tr>
 </table>
 
