@@ -10,6 +10,7 @@ base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 class Config(BaseConfig):
     """CNN配置文件"""
+    name = "TextCNN"
     embedding_dim = 100
     seq_length = 600
     num_classes = 10
@@ -35,6 +36,7 @@ class TextCNN(object):
     """CNN模型"""
     def __init__(self, config):
         self.config = config
+        self.name = config.name
         self.input_x = tf.placeholder(tf.int32, shape=[None, self.config.seq_length], name='input_x')
         self.input_y = tf.placeholder(tf.int32, shape=[None, self.config.num_classes], name='input_y')
         self.keep_prob = tf.placeholder(tf.float32, name='dropout')

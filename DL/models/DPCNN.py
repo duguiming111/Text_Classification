@@ -9,6 +9,7 @@ base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 
 class Config(BaseConfig):
+    name = "DPCNN"
     embedding_dim = 100
     seq_length = 600
     num_classes = 10
@@ -36,6 +37,7 @@ class DPCNN(object):
 
     def __init__(self, config):
         self.config = config
+        self.name = config.name
         self.input_x = tf.placeholder(tf.int32, [None, self.config.seq_length], name='input_x')
         self.input_y = tf.placeholder(tf.int32, [None, self.config.num_classes], name='input_y')
         self.keep_prob = tf.placeholder(tf.float32, name='keep_prob')

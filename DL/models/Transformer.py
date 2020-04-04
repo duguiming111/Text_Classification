@@ -11,6 +11,7 @@ base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 
 class Config(BaseConfig):
     """Transformer配置文件"""
+    name = "Transformer"
     embedding_dim = 100
     seq_length = 120
     num_classes = 10
@@ -37,6 +38,7 @@ class Transformer(object):
     """Transformer模型"""
     def __init__(self, config):
         self.config = config
+        self.name = config.name
         self.input_x = tf.placeholder(tf.int32, [None, self.config.seq_length], name='input_x')
         self.input_y = tf.placeholder(tf.float32, [None, self.config.num_classes], name='input_y')
         self.keep_prob = tf.placeholder(tf.float32, name='keep_prob')
