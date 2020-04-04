@@ -20,14 +20,16 @@ def feed_data(model, x_batch, y_batch, keep_prob):
     return feed_dict
 
 
-def evaluate(sess, model, x_, y_):
+def evaluate(sess, model, config, x_, y_):
     """验证集测试"""
     data_len = len(x_)
-    batch_eval = dp.batch_iter(x_, y_, 128)
+    batch_eval = dp.batch_iter(x_, y_, config.batch_size)
     total_loss = 0.0
     total_acc = 0.0
     for x_batch, y_batch in batch_eval:
         batch_len = len(x_batch)
+        if model.name == "Transformer" and batch_len < config.batch_size:
+            continue
         feed_dict = feed_data(model, x_batch, y_batch, 1.0)
         loss, acc = sess.run([model.loss, model.acc], feed_dict=feed_dict)
         total_loss += loss * batch_len
@@ -62,13 +64,15 @@ def train(model, config, word2id, cat2id):
         batch_train = dp.batch_iter(X_train, y_train, config.batch_size)
         start = time.time()
         for x_batch, y_batch in batch_train:
+            if model.name == "Transformer" and len(x_batch) < config.batch_size:
+                continue
             feed_dict = feed_data(model, x_batch, y_batch, config.dropout_keep_prob)
             _, global_step, train_summaries, train_loss, train_accuracy = session.run([model.optim, model.global_step,
                                                                                        merged_summary, model.loss,
                                                                                        model.acc], feed_dict=feed_dict)
             if global_step % config.print_per_batch == 0:
                 end = time.time()
-                val_loss, val_accuracy = evaluate(session, model, X_val, y_val)
+                val_loss, val_accuracy = evaluate(session, model, config, X_val, y_val)
                 writer.add_summary(train_summaries, global_step)
 
                 # If improved, save the model
@@ -104,18 +108,24 @@ def test(model, config, word2id, cat2id, categories):
     saver.restore(sess=session, save_path=config.best_model_dir)  # 读取保存的模型
 
     print('Testing...')
-    loss_test, acc_test = evaluate(session, model, x_test, y_test)
+    loss_test, acc_test = evaluate(session, model, config, x_test, y_test)
     msg = 'Test Loss: {0:>6.2}, Test Acc: {1:>7.2%}'
     print(msg.format(loss_test, acc_test))
 
-    batch_size = 128
+    batch_size = config.batch_size
     data_len = len(x_test)
     num_batch = int((data_len - 1) / batch_size) + 1
 
-    y_test_cls = np.argmax(y_test, 1)
-    y_pred_cls = np.zeros(shape=len(x_test), dtype=np.int32)  # 保存预测结果
+    if model.name == "Transformer":
+        y_test_cls = np.argmax(y_test[0: config.batch_size*(num_batch-1)], 1)
+        y_pred_cls = np.zeros(shape=len(x_test[0: config.batch_size*(num_batch-1)]), dtype=np.int32)  # 保存预测结果
+    else:
+        y_test_cls = np.argmax(y_test, 1)
+        y_pred_cls = np.zeros(shape=len(x_test), dtype=np.int32)  # 保存预测结果
     for i in range(num_batch):  # 逐批次处理
         start_id = i * batch_size
+        if model.name == "Transformer" and (i + 1) * batch_size > data_len:
+             continue
         end_id = min((i + 1) * batch_size, data_len)
         feed_dict = {
             model.input_x: x_test[start_id:end_id],
