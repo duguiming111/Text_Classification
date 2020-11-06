@@ -4,8 +4,8 @@
 import os
 import argparse
 from importlib import import_module
-from data_helper.data_process import DataProcess
-from train_val_test import train, test
+from DL.data_helper.data_process import DataProcess
+from DL.train_val_test import train, test
 
 
 parser = argparse.ArgumentParser(description='Chinese Text Classification')

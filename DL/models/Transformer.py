@@ -4,7 +4,7 @@
 import os
 import numpy as np
 import tensorflow as tf
-from models.base_config import BaseConfig
+from DL.models.base_config import BaseConfig
 
 base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
 

@@ -6,7 +6,7 @@ import tensorflow as tf
 from sklearn import metrics
 import numpy as np
 
-from data_helper.data_process import DataProcess
+from DL.data_helper.data_process import DataProcess
 
 dp = DataProcess()
 

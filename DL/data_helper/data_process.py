@@ -6,7 +6,7 @@ import jieba
 import numpy as np
 import tensorflow.contrib.keras as kr
 from collections import Counter
-from models.base_config import BaseConfig
+from DL.models.base_config import BaseConfig
 
 config = BaseConfig()
 
