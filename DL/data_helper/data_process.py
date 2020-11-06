@@ -33,7 +33,6 @@ class DataProcess(object):
                 text = text.replace('\n', '')
                 text = text.replace(' ', '')
                 texts.append([word for word in jieba.cut(text) if word not in stopwords])
-                print(len(texts))
         return labels, texts
 
     def build_vocab(self, filenames, vocab_dir, vocab_size=8000):
