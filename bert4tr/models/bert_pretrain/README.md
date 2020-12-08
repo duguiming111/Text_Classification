@@ -1,0 +1,1 @@
+预训练模型下载：https://huggingface.co/bert-base-chinese/tree/main <br />
