@@ -118,14 +118,38 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
 </table>
 
-### 5、更新
+## bert4tr 基于torch版本的BER系类的文本分类
+### 1、目录结构
+<ul>
+    <li>data: 训练数据集文件夹</li>
+    <li>imgs: 存放运行结果</li>
+    <li>models: 模型结构</li>
+    <li>result: 存放结果的文件夹</li>
+    <li>util: 工具函数文件</li>
+    <li>run.py: 训练模型文件</li>
+    <li>train_val_test.py: 具体训练验证和测试的代码</li>
+</ul>
+
+### 2、数据
+数据来源为<a href="https://github.com/649453932/Bert-Chinese-Text-Classification-Pytorch">649453932</a>项目的数据。<br />
+
+### 3、运行
+python3 run.py --mode=bert
+
+### 4、效果
+#### 4.1 bert的效果
+<img src="imgs/result_bert.png">
+
+## 五 更新
 <ul>
     <li>2020年11月6日，增加基于pytorch版bert文本分类实现</li>
     <li>2020年3月31日，增加DL（深度学习）文本分类实现</li>
     <li>2019年7月5日，增加机器学习垃圾短信分类实现</li> 
 </ul>
 
-### 六、参考
+
+
+## 六、参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
 [2] https://github.com/cjymz886/text-cnn <br />
 [3] https://github.com/649453932/Chinese-Text-Classification-Pytorch
