@@ -139,13 +139,14 @@ mode: bert/albert
 
 ### 4、效果
 #### 4.1 bert的效果
-<img src="imgs/result_bert.png">
+<img src="bert4tr/imgs/result_bert.png">
 
 #### 4.2 albert的效果
-<img src="imgs/result_albert.png">
+<img src="bert4tr/imgs/result_albert.png">
 
 ## 更新
 <ul>
+    <li>2020年12月8日，增加基于pytorch版albert文本分类实现</li>
     <li>2020年11月6日，增加基于pytorch版bert文本分类实现</li>
     <li>2020年3月31日，增加DL（深度学习）文本分类实现</li>
     <li>2019年7月5日，增加机器学习垃圾短信分类实现</li> 
