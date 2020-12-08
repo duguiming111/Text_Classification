@@ -118,7 +118,7 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
     </tr>
 </table>
 
-## bert4tr 基于torch版本的BER系类的文本分类
+## bert4tr 基于torch版本的BERT系类的文本分类
 ### 1、目录结构
 <ul>
     <li>data: 训练数据集文件夹</li>
