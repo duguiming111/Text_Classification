@@ -134,11 +134,15 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
 数据来源为<a href="https://github.com/649453932/Bert-Chinese-Text-Classification-Pytorch">649453932</a>项目的数据。<br />
 
 ### 3、运行
-python3 run.py --mode=bert
+python3 run.py --mode=bert<br />
+mode: bert/albert
 
 ### 4、效果
 #### 4.1 bert的效果
 <img src="imgs/result_bert.png">
+
+#### 4.2 albert的效果
+<img src="imgs/result_albert.png">
 
 ## 更新
 <ul>
