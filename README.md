@@ -147,8 +147,6 @@ python3 run.py --mode=bert
     <li>2019年7月5日，增加机器学习垃圾短信分类实现</li> 
 </ul>
 
-
-
 ## 六、参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
 [2] https://github.com/cjymz886/text-cnn <br />
