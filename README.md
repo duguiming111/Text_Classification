@@ -140,14 +140,14 @@ python3 run.py --mode=bert
 #### 4.1 bert的效果
 <img src="imgs/result_bert.png">
 
-## 五 更新
+## 更新
 <ul>
     <li>2020年11月6日，增加基于pytorch版bert文本分类实现</li>
     <li>2020年3月31日，增加DL（深度学习）文本分类实现</li>
     <li>2019年7月5日，增加机器学习垃圾短信分类实现</li> 
 </ul>
 
-## 六、参考
+## 参考
 [1] https://github.com/gaussic/text-classification-cnn-rnn<br />
 [2] https://github.com/cjymz886/text-cnn <br />
 [3] https://github.com/649453932/Chinese-Text-Classification-Pytorch
