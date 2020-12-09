@@ -119,6 +119,8 @@ xxx代表训练的模型，有TextCNN、TextRNN、HAN、TextRCNN、DPCNN、TextR
 </table>
 
 ## bert4tr 基于torch版本的BERT系类的文本分类
+pytorch==1.1.0
+transformers==3.0.2
 ### 1、目录结构
 <ul>
     <li>data: 训练数据集文件夹</li>
@@ -144,8 +146,12 @@ mode: bert/albert
 #### 4.2 albert的效果
 <img src="bert4tr/imgs/result_albert.png">
 
+#### 4.3 roberta的效果
+<img src="bert4tr/imgs/result_roberta.png">
+
 ## 更新
 <ul>
+    <li>2020年12月9日，增加基于pytorch版roberta文本分类实现</li>
     <li>2020年12月8日，增加基于pytorch版albert文本分类实现</li>
     <li>2020年11月6日，增加基于pytorch版bert文本分类实现</li>
     <li>2020年3月31日，增加DL（深度学习）文本分类实现</li>

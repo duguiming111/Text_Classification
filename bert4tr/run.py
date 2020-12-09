@@ -35,6 +35,8 @@ if __name__ == '__main__':
     # train
     if config.name == 'bert':
         model = x.BERTModel(config).to(config.device)
-    else:
+    elif config.name == 'albert':
         model = x.ALBERTModel(config).to(config.device)
+    else:
+        model = x.RoBERTaModel(config).to(config.device)
     train(config, model, train_iter, dev_iter, test_iter)
