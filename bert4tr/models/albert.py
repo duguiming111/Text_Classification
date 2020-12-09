@@ -20,17 +20,17 @@ class Config(BaseConfig):
     hidden_size = 768
     require_improvement = 1000
 
-    bert_path = os.path.join(base_dir, 'models/albert_pretrain')
+    albert_path = os.path.join(base_dir, 'models/albert_pretrain')
     device = torch.device('cuda' if torch.cuda.is_available() else 'cpu')
-    tokenizer = BertTokenizer.from_pretrained(bert_path)
+    tokenizer = BertTokenizer.from_pretrained(albert_path)
     best_model_dir = os.path.join(base_dir, 'result/best_model/albert/') + name + '.ckpt'
 
 
 class ALBERTModel(nn.Module):
     def __init__(self, config):
         super(ALBERTModel, self).__init__()
-        self.albert_config = AlbertConfig.from_pretrained(config.bert_path, num_labels=config.num_classes)
-        self.albert = AlbertForSequenceClassification.from_pretrained(config.bert_path, config=self.albert_config)
+        self.albert_config = AlbertConfig.from_pretrained(config.albert_path, num_labels=config.num_classes)
+        self.albert = AlbertForSequenceClassification.from_pretrained(config.albert_path, config=self.albert_config)
         for param in self.albert.parameters():
             param.requires_grad = True
 
