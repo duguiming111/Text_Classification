@@ -137,7 +137,7 @@ transformers==3.0.2
 
 ### 3、运行
 python3 run.py --mode=bert<br />
-mode: bert/albert
+mode: bert/albert/roberta/ernie
 
 ### 4、效果
 #### 4.1 bert的效果
