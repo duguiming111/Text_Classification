@@ -149,8 +149,12 @@ mode: bert/albert/roberta/ernie
 #### 4.3 roberta的效果
 <img src="bert4tr/imgs/result_roberta.png">
 
+#### 4.4 ernie的效果
+<img src="bert4tr/imgs/result_ernie.png">
+
 ## 更新
 <ul>
+    <li>2020年12月10日，增加基于pytorch版ernie文本分类实现</li>
     <li>2020年12月9日，增加基于pytorch版roberta文本分类实现</li>
     <li>2020年12月8日，增加基于pytorch版albert文本分类实现</li>
     <li>2020年11月6日，增加基于pytorch版bert文本分类实现</li>
