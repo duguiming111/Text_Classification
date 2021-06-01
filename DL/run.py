@@ -4,8 +4,8 @@
 import os
 import argparse
 from importlib import import_module
-from DL.data_helper.data_process import DataProcess
 from DL.train_val_test import train, test
+from DL.data_helper.data_process import DataProcess
 
 
 parser = argparse.ArgumentParser(description='Chinese Text Classification')
@@ -23,7 +23,7 @@ if __name__ == '__main__':
     pkg = import_module('models.' + model_name)
     config = pkg.Config()
 
-    dp = DataProcess()
+    dp = DataProcess(config)
     # 构建词表
     filenames = [config.train_dir, config.val_dir, config.test_dir]
     if not os.path.exists(config.vocab_dir):

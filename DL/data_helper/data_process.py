@@ -4,22 +4,19 @@
 """
 import jieba
 import numpy as np
-import tensorflow.contrib.keras as kr
 from collections import Counter
-from DL.models.base_config import BaseConfig
-
-config = BaseConfig()
+import tensorflow.contrib.keras as kr
 
 
 class DataProcess(object):
-    def __init__(self):
-        pass
+    def __init__(self, config):
+        self.config = config
 
     def read_data(self, filename):
         """读取数据"""
         # 读取停用词
         stopwords = list()
-        with open(config.stopwords_dir, 'r', encoding='utf-8') as f:
+        with open(self.config.stopwords_dir, 'r', encoding='utf-8') as f:
             for word in f.readlines():
                 stopwords.append(word[:-1])
         labels = list()

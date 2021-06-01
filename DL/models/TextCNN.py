@@ -5,7 +5,7 @@ import os
 import tensorflow as tf
 from DL.models.base_config import BaseConfig
 
-base_dir = os.path.abspath(os.path.dirname(os.path.dirname(__file__)))
+base_dir = os.path.dirname(os.path.abspath(__file__))
 
 
 class Config(BaseConfig):

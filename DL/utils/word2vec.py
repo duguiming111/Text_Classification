@@ -10,7 +10,7 @@ from gensim.models import word2vec
 
 sys.path.append('..')
 
-from models.base_config import BaseConfig
+from DL.models.base_config import BaseConfig
 
 
 class ReadData(object):
