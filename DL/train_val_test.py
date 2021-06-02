@@ -2,13 +2,15 @@
 # Description: 训练验证和测试
 # Date:2020-3-31
 import time
+import numpy as np
 import tensorflow as tf
 from sklearn import metrics
-import numpy as np
 
+from DL.models.base_config import BaseConfig
 from DL.data_helper.data_process import DataProcess
 
-dp = DataProcess()
+base_config = BaseConfig()
+dp = DataProcess(base_config)
 
 
 def feed_data(model, x_batch, y_batch, keep_prob):
