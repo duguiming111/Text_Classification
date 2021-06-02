@@ -9,6 +9,7 @@ from sklearn import metrics
 from DL.models.base_config import BaseConfig
 from DL.data_helper.data_process import DataProcess
 
+
 base_config = BaseConfig()
 dp = DataProcess(base_config)
 
