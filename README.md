@@ -154,6 +154,7 @@ mode: bert/albert/roberta/ernie
 
 ## 更新
 <ul>
+    <li>2021年9月26日，计划增加新的预训练模型</li>
     <li>2020年12月10日，增加基于pytorch版ernie文本分类实现</li>
     <li>2020年12月9日，增加基于pytorch版roberta文本分类实现</li>
     <li>2020年12月8日，增加基于pytorch版albert文本分类实现</li>
